@@ -104,6 +104,9 @@ export default _.flowRight(
   },
 
   draw() {
+    if (!this._containerElement) {
+      return;
+    }
     // https://developers.google.com/maps/documentation/javascript/3.exp/reference#OverlayView
     const overlayView = getInstanceFromComponent(this);
     // https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapPanes
